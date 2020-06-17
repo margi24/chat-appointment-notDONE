@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="100dp">
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/loginHeight"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/loginMargins"
+        android:width="@dimen/loginWeight"
+        android:hint="email" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/loginHeight"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/loginMargins"
+        android:width="@dimen/loginWeight"
+        android:hint="name" />
+
+    <EditText
+        android:id="@+id/passwordRText"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/loginHeight"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/loginMargins"
+        android:width="@dimen/loginWeight"
+        android:hint="@string/password" />
+
+    <EditText
+
+        android:id="@+id/repeatPasswordText"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/loginHeight"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/loginMargins"
+        android:width="@dimen/loginWeight"
+        android:hint="repeat password"
+        android:importantForAutofill="no"
+        android:inputType="textPassword" />
+
+    <RadioGroup
+
+        android:layout_width="@dimen/loginWeight"
+        android:layout_height="@dimen/radioGroupHeight"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/loginMargins"
+        >
+        <RadioButton
+            android:id="@+id/doctorRadioBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Doctor" />
+
+        <RadioButton
+            android:id="@+id/pacientRadioBtn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Pacient" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="@dimen/loginWeight"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/loginMargins"
+        android:text="Choose"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="@dimen/loginWeight"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/loginMargins"
+        android:text="Sign Up" />
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation2"
+    app:startDestination="@id/addHospital2">
+
+    <fragment
+        android:id="@+id/addHospital2"
+        android:name="com.example.quickdoctor.fragment.AddHospital"
+        android:label="add_hospital"
+        tools:layout="@layout/add_hospital" >
+        <action
+            android:id="@+id/action_addHospital2_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homePage"
+        android:name="com.example.quickdoctor.fragment.HomePage"
+        android:label="home_page"
+        tools:layout="@layout/home_page" >
+        <action
+            android:id="@+id/action_homePage_to_allAppointmentFragment"
+            app:destination="@id/allAppointmentFragment" />
+        <action
+            android:id="@+id/action_homePage_to_addAppointment"
+            app:destination="@id/hospitalList" />
+        <action
+            android:id="@+id/action_homePage_to_doctorList"
+            app:destination="@id/doctorList" />
+    </fragment>
+    <fragment
+        android:id="@+id/allAppointmentFragment"
+        android:name="com.example.quickdoctor.fragment.appointments.AppointmentListFragment"
+        android:label="appointment"
+        tools:layout="@layout/appointment" />
+    <fragment
+        android:id="@+id/hospitalList"
+        android:name="com.example.quickdoctor.fragment.appointments.HospitalList"
+        android:label="add_appointment"
+        tools:layout="@layout/hospital_list">
+        <action
+            android:id="@+id/action_addAppointment_to_doctorList"
+            app:destination="@id/doctorList" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorList"
+        android:name="com.example.quickdoctor.fragment.DoctorList"
+        android:label="doctor_list"
+        tools:layout="@layout/doctor_list" >
+        <argument
+            android:name="hospitalIdRecipient"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_doctorList_to_addAppointment"
+            app:destination="@id/addAppointment" />
+        <action
+            android:id="@+id/action_doctorList_to_room"
+            app:destination="@id/room" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAppointment"
+        android:name="com.example.quickdoctor.fragment.AddAppointment"
+        android:label="add_appointment"
+        tools:layout="@layout/add_appointment" >
+        <argument android:name="idHospital" />
+        <argument android:name="idDoctor" />
+    </fragment>
+    <fragment
+        android:id="@+id/room"
+        android:name="com.example.quickdoctor.fragment.Room"
+        android:label="room"
+        tools:layout="@layout/room" />
+
+</navigation>
